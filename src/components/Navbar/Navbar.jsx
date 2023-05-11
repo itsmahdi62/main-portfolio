@@ -1,7 +1,8 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../../hooks/useMediaQuery"
-
+import closeIcon from "../../assets/close-icon.svg"
+import menuIcon from "../../assets/menu-icon.svg"
 const Link = ({page , selectedPage , setSelectedPage}) =>{
     const lowerCasePage = page.toLowerCase();
     return <AnchorLink className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
@@ -22,38 +23,48 @@ const Navbar = ({selectedPage , setSelectedPage}) => {
             <h4 className="font-playfair text-3xl font-bold">JE</h4>
             {/* Desktop Nav */}
             {isAboveSmallScreens ? (
-                <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+              <div className="flex gap-16 font-opensans text-sm font-semibold justify-between" >
                 <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Skills"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Projects"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Testimonials"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-                </div>) : 
-                <button className="rounded-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)} >
-                    <img alt="menu-icon" src="../../assets/menu-icon.svg" />
-                </button>}
-        </div>
-        
+                  page="Home"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Skills"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Projects"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Testimonials"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+                <Link
+                  page="Contact"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                />
+              </div>) : 
+              <button className="rounded-full bg-red p-2" onClick={() => setIsMenuToggled(!isMenuToggled)} >
+                  <img alt="menu-icon" src={menuIcon} />
+              </button>}
+       
+         {!isAboveSmallScreens && isMenuToggled && (
+          <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+             {/*Clode Icon */}
+             <div className="flex justify-end p-12">
+                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                <img alt="close-icon" src={closeIcon} />
+                </button>
+             </div>
+          </div>
+         )}
+      </div>
     </nav> );
 }
  
