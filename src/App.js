@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from './components/Navbar/Navbar';
+import DotGroup from './components/DotGroup/DotGroup';
 import './App.css';
 const App = () => {
   const [selectedPage , setSelectedPage]  = useState('home');
@@ -25,8 +26,8 @@ const App = () => {
           setSelectedPage={selectedPage}
         />)}
       </div>
+
     </div>
   );
 }
-
 export default App;
