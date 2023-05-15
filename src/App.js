@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from './components/Navbar/Navbar';
 import DotGroup from './components/DotGroup/DotGroup';
+import Landing from "./components/Landing/Landing"
 import './App.css';
 const App = () => {
   const [selectedPage , setSelectedPage]  = useState('home');
@@ -10,8 +11,8 @@ const App = () => {
   
   useEffect(() =>{
     const handelScroll= () =>{
-      if(window.scrollY === 0) setIsTopOfPage(true);
-      if( window.screenY !==0) setIsTopOfPage(false);
+      if( window.scrollY === 0) setIsTopOfPage(true);
+      if( window.screenY !== 0) setIsTopOfPage(false);
     }
     window.addEventListener("scroll" , handelScroll)
     return () => window.removeEventListener("Scroll" , handelScroll)
@@ -25,8 +26,8 @@ const App = () => {
           selectedPage={selectedPage}
           setSelectedPage={selectedPage}
         />)}
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
-
     </div>
   );
 }
