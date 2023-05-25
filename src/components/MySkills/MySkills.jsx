@@ -14,7 +14,7 @@ const MySkills = () => {
                 initial="hidden"
                 whileInView="visible" 
                 viewport={{once : true , amount :0.5}} 
-                transition={{duration : 0.5 , delay:0.4}}
+                transition={{duration : 0.5}}
                 variants={{
                 hidden:{opacity : 0 , x :-50 },
                 visible : { opacity :1 , x: 0}
@@ -24,7 +24,8 @@ const MySkills = () => {
                 </p>
 
                 <LineGradient width="w-1/3" />
-                <p className="mt-10 mb-7">lorem loremloremloremloremloremloremloremloremloremloremloremlorem</p>
+                <p className="mt-10 mb-7">lorem loremloremloremloremlorem
+                loremloremloremloremloremloremlorem</p>
                 </motion.div>
 
                 <div className="mt-16 md:mt-0">
@@ -47,7 +48,7 @@ const MySkills = () => {
                         initial="hidden"
                         whileInView="visible" 
                         viewport={{once : true , amount :0.5}} 
-                        transition={{duration : 0.5 , delay:0.4}}
+                        transition={{duration : 0.5 }}
                         variants={{
                         hidden:{opacity : 0 , y :50 },
                         visible : { opacity :1 , y: 0}
@@ -57,10 +58,13 @@ const MySkills = () => {
                                 <p className="font-playfair font-semibold text-5xl">01</p>
                                 <p className="font-playfair font-semibold text-3xl mt-3">Experience</p>
                             </div>
-                            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1] " />
+                            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
                         </div>
                         <p className="mt-5">
-                            lorem lorem loremloremloremloremloremloremloremloremloremloremloremlorem
+                            lorem lorem loremloremloremloremlo remlo
+                            remloremloremloremloremloreml
+                            oremnnnnnnnnnnnnnnnnn
+                            nnnnnnnnnnnn
                         </p>
                     </motion.div>
                      {/* Innovative */}
@@ -81,8 +85,9 @@ const MySkills = () => {
                             </div>
                             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1] " />
                         </div>
-                        <p className="mt-5">
-                            lorem lorem loremloremloremloremloremloremloremloremloremloremloremlorem
+                        <p className="mt-5  whitespace-wrap">
+                            lorem lorem loremloremloremloremloremloremlore
+                            mloremloremloremloremlorem
                         </p>
                     </motion.div>
 
@@ -92,7 +97,7 @@ const MySkills = () => {
                         initial="hidden"
                         whileInView="visible" 
                         viewport={{once : true , amount :0.5}} 
-                        transition={{duration : 0.5 , delay:0.2}}
+                        transition={{duration : 0.5 , delay:0.4}}
                         variants={{
                         hidden:{opacity : 0 , y :50 },
                         visible : { opacity :1 , y: 0}
@@ -104,8 +109,9 @@ const MySkills = () => {
                             </div>
                             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1] " />
                         </div>
-                        <p className="mt-5">
-                            lorem lorem loremloremloremloremloremloremloremloremloremloremloremlorem
+                        <p className="mt-5  whitespace-wrap">
+                            lorem lorem loremloremloremloremloremloremloremloremlor
+                            emloremloremloremddddddddddddddddddddd
                         </p>
                     </motion.div>
             </div>
