@@ -1,4 +1,3 @@
-
 import LineGradient from "../LineGradient/LineGradient";
 import {motion} from "framer-motion"
 
@@ -15,14 +14,21 @@ const projectVariant = {
     },
 }
 
-const Project = ({title}) => {
-    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex-col justify-center items-center`
+const Project = ({title , sub}) => {
+    const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 flex-col justify-center items-center text-center p-16 text-deep-blue`
     const projectsTitle = title.split(" ").join("-").toLowerCase();
     return(
         <motion.div variants={projectVariant} className="relative">
             <div className={overlayStyles}>
-
+                <p className="text-2xl font-playfair">{title}</p>
+                <p className="mt-7">
+                    lorem lorem lorem 
+                    lorem lorem lorem lorem lorem loremlorem lo
+                    rem loremlorem lorem loremlorem lore
+                    m loremlorem lorem lorem
+                </p>
             </div>
+            <img src={`../../assets/${projectsTitle}.jpeg`} alt=""/>
         </motion.div>
     )
 }
@@ -60,15 +66,26 @@ const Projects = () => {
                     whileInView="visible" 
                     viewport={{once : true , amount :0.5}} 
                     transition={{duration : 0.5}}
-                    variants={{
-                    hidden:{opacity : 0 , y :-50 },
-                    visible : { opacity :1 , y: 0}
-                    }}>
+                    variants={container}>
                     {/* ROW 1 */}
                    <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] msx-h-[400px] text-2xl font-playfair font-semibold">
                         BEAUTIFUL USER INTERFACE
                    </div>
                    <Project title="Project 1"/>
+                   <Project title="Project 2"/>
+
+                   {/* Row 2 */}
+                   <Project title="Project 3"/>
+                   <Project title="Project 4"/>
+                   <Project title="Project 5"/>
+
+                   {/* Row 3 */}
+                   <Project title="Project 6"/>
+                   <Project title="Project 7"/>
+
+                   <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] msx-h-[400px] text-2xl font-playfair font-semibold">
+                        SMOOTH USER EXPERIENCE
+                   </div>
                 </motion.div>
             </div>
     </section> );
