@@ -7,6 +7,7 @@ import LineGradient from "./components/LineGradient/LineGradient"
 import MySkills from "./components/MySkills/MySkills"
 import Projects from './components/Projects/Projects';
 import './App.css';
+import Contact from './components/Contact/Contact';
 const App = () => {
   const [selectedPage , setSelectedPage]  = useState('home');
   const [isTopOfPage , setIsTopOfPage] = useState(true)
@@ -38,6 +39,10 @@ const App = () => {
        <LineGradient />
        <div className='w-5/6 mx-auto '>
             <Projects />
+       </div>
+       <LineGradient />
+       <div className='w-5/6 mx-auto '>
+            <Contact />
        </div>
     </div>
   );
