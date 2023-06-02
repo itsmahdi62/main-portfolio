@@ -1,7 +1,7 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profileImage from "../../assets/profile-image.png"
+import profileImage from "../../assets/profile.jpg"
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 const Landing = ({setSelectedPage}) => {
 
@@ -13,9 +13,9 @@ const Landing = ({setSelectedPage}) => {
             {/* Image section */}
             <div className="md:order-2 flex justify-center basis-3/5z-10 mt-16 md:mt-32">
                 {isAboveMediumScreens ? (
-                    <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20
+                    <div className="relative z-0 ml-20 before:absolute before:-top-12 before:-left-12
                         before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
-                        <img alt="profile" src={profileImage} className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400] md:max-w-[600px] "/>
+                        <img alt="profile" src={profileImage} className="rounded-t-full hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400] md:max-w-[600px] "/>
                     </div> 
                     ) 
                     : 
@@ -41,16 +41,16 @@ const Landing = ({setSelectedPage}) => {
                              <span className="xs:relative xs:text-deep-blue  xs:font-semibold z-20
                                 xs:before:content-brush before:absolute before:-left-[25px]
                                 before:-top-[70px] before:z-[-1]">
-                                Esper
+                                Almasi
                              </span>
                         </p>
                         <p className="mt-10 mb-7 text-sm text-center md:text-start">
-                            ddddddddddddddddddddddddd
+                            A JUNIOR FRONTEND DEVELOPER
                         </p>
                      </motion.div>
                      {/*Call to actions */}
                      <motion.div
-                     className="flex mt-5 justify-center md:justify-start"
+                     className="flex  justify-center mt-5 md:justify-start "
                         initial="hidden"
                         whileInView="visible" 
                         viewport={{once : true , amount :0.5}} 

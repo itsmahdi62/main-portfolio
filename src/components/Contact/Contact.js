@@ -6,7 +6,6 @@ import {motion} from "framer-motion"
 const Contact = () => {
     const { 
         register,
-
         trigger,
         formState: {errors}
     } = useForm() ;
@@ -21,6 +20,7 @@ const Contact = () => {
     return ( <section id="contact" className="py-48">
         {/* Headings */}
         <motion.div 
+                className="flex justify-end w-full"
                 initial="hidden"
                 whileInView="visible" 
                 viewport={{once : true , amount :0.5}} 
@@ -30,12 +30,12 @@ const Contact = () => {
                 visible : { opacity :1 , x: 0}
                 }}>
                 <div>
-                <p className="font-playfair font-semibold text-4xl">
-                    <span className="text-yellow">CONTACT ME</span> TO GET STARTED
-                </p>
-                <div className="flex md:justify-end my-5">
-                    <LineGradient width="w-1/3" />
-                </div>
+                    <p className="font-playfair font-semibold text-4xl">
+                        <span className="text-yellow">CONTACT ME</span> TO GET STARTED
+                    </p>
+                    <div className="flex md:justify-end my-5">
+                        <LineGradient width=" w-2/3" />
+                    </div>
                 </div>
         </motion.div>
         {/* Form & IMAGE section */}
@@ -66,10 +66,43 @@ const Contact = () => {
                 hidden:{opacity : 0 , y :50 },
                 visible : { opacity :1 , y: 0}
                 }}>
-                <form target="_blank" onSubmit={onSubmit} action="" method="POST">
+                <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/amiralmasi021@gmail.com" method="POST">
                     <input className="w-full bg-blue font-semibold placeholder-opaque-black p-3" type="text" placeholder="NAME"
                         {...register("name" , {required : true , maxLength : 100 , })}
                     />
+                    {errors.name && (
+                        <p className="text-red mt-1">
+                            {errors.name.type === 'required' && "This field is required."}
+                            {errors.name.type === 'maxLength' && "Max length is 100 character."}
+                        </p>
+                    )}
+
+                    <input className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5" type="text" placeholder="EMAIL"
+                        {...register("email" , {required : true , pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+|.[A-z]{2,}$/i,
+                        })}
+                    />
+                    {errors.email && (
+                        <p className="text-red mt-1">
+                            {errors.email.type === 'required' && "This field is required."}
+                            {errors.email.type === 'pattern' && "Invalid email address."}
+                        </p>
+                    )}
+
+                    <textarea className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5" type="text" placeholder="MESSAGE"
+                        row="4"
+                        cols="50"
+                        {...register("message" , {required : true , maxLength : 2000,
+                        })}
+                    />
+                    {errors.message && (
+                        <p className="text-red mt-1">
+                            {errors.message.type === 'required' && "This field is required."}
+                            {errors.message.type === 'maxLength' && "Max lenght is 2000 char."}
+                        </p>
+                    )}
+                    <button type="submit" className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500">
+                        SEND ME A MESSAGE
+                    </button>
                 </form>
             </motion.div>
         </div>
