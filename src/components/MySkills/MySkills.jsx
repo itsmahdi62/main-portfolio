@@ -24,13 +24,41 @@ const MySkills = () => {
                 </p>
 
                 <LineGradient width="w-1/3" />
-                <p className="mt-10 mb-7">lorem loremloremloremloremlorem
-                loremloremloremloremloremloremlorem</p>
+                <div className="flex justify-between">
+                    <p className="mt-10 mb-7">
+                        Reactjs<br />
+                        javascript<br />
+                        HTML<br />
+                        CSS<br />
+                        bootstrap<br />
+                        tailwindcss<br />
+                        axios<br />
+                        flex-box<br />
+                        SASS<br />
+                        Redux-toolkit<br />
+                        typescript<br />
+                        nextjs<br />
+                    </p>
+                    <p className="mt-10 mb-7 text-red">
+                        very high<br/>
+                        high<br />
+                        very high<br />
+                        very high<br />
+                        very high<br />
+                        high<br />
+                        high<br />
+                        very high<br />
+                        very high<br />
+                        very high<br />
+                        basic<br />
+                        basic<br />
+                    </p>
+                </div>
                 </motion.div>
 
                 <div className="mt-16 md:mt-0">
                     {isAboveMediumScreens ? ( <div className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-                        before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
+                        before:w-full before:max-w-[600px] before:h-full before:border-2 before:border-blue before:z-[-1]">
                         <img alt="skills" src={skillImage} className="z-10 "/>
                     </div> 
                     
@@ -61,10 +89,7 @@ const MySkills = () => {
                             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
                         </div>
                         <p className="mt-5">
-                            lorem lorem loremloremloremloremlo remlo
-                            remloremloremloremloremloreml
-                            oremnnnnnnnnnnnnnnnnn
-                            nnnnnnnnnnnn
+                            I learn to develope frontend by my self
                         </p>
                     </motion.div>
                      {/* Innovative */}
