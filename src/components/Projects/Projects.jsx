@@ -34,7 +34,7 @@ const Project = ({title , sub}) => {
 }
 const Projects = () => {
     return ( 
-        <section className="pt-48 pb-48" id="projects">
+        <section className="pt-48 pb-48 mt-32" id="projects">
         <motion.div 
             className="md:w-2/4 mx-auto text-center"
             initial="hidden"
@@ -54,8 +54,7 @@ const Projects = () => {
                 <LineGradient width="w-1/3" />
             </div>
 
-            <p className="mt-10 mb-10">lorem loremloremloremloremlorem
-            loremloremloremloremloremloremlorem</p>
+            <p className="mt-10 mb-10">These projects have been created by me ! Some of have been created to show my ability to design and I learn programming with these projects</p>
         </motion.div>
 
             {/* List of projeects  */}

@@ -69,7 +69,7 @@ const MySkills = () => {
             </div>
 
             {/* Skills  */}
-            <div className="md:flex md:justify-between mt-16 gap-32">
+            <div className="md:flex md:justify-between mt-16 gap-32 ">
                     {/* Experience */}
                     <motion.div
                         className="md:w-1/3 mt-10"
@@ -89,7 +89,8 @@ const MySkills = () => {
                             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
                         </div>
                         <p className="mt-5">
-                            I learn to develope frontend by my self
+                        ] I'm a student in in Imam khomeini International university of Qazvin(IKIU)<br />
+                            Currently I am searching for a frontend-developer position
                         </p>
                     </motion.div>
                      {/* Innovative */}
@@ -111,8 +112,7 @@ const MySkills = () => {
                             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1] " />
                         </div>
                         <p className="mt-5  whitespace-wrap">
-                            lorem lorem loremloremloremloremloremloremlore
-                            mloremloremloremloremlorem
+                            
                         </p>
                     </motion.div>
 
@@ -135,8 +135,7 @@ const MySkills = () => {
                             <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1] " />
                         </div>
                         <p className="mt-5  whitespace-wrap">
-                            lorem lorem loremloremloremloremloremloremloremloremlor
-                            emloremloremloremddddddddddddddddddddd
+                            I see myself as a top IT-man and a frontend developer in next year
                         </p>
                     </motion.div>
             </div>
